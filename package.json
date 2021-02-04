@@ -4,5 +4,8 @@
   },
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "prettier": "^2.2.1"
   }
 }

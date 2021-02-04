@@ -1,4 +1,9 @@
-function sum(a, b) {
-  return a + b;
-}
-module.exports = sum;
+class DockingStation {
+
+  releaseBike() {
+    return "Bike is released"
+  };
+
+};
+
+module.exports = DockingStation;

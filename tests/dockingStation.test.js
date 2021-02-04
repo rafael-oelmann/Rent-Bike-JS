@@ -1,5 +1,9 @@
-const sum = require('../src/dockingStation');
+const DockingStation = require('../src/dockingStation');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+
+describe('dockingStation', () =>{
+  test('docking station releases a bike', () => {
+    const dock = new DockingStation();
+    expect(dock.releaseBike()).toBe('Bike is released')
+  });
 });
