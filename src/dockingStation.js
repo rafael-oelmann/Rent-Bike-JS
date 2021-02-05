@@ -4,6 +4,7 @@ class DockingStation {
 
   constructor() {
     this.storage = []
+    this.capacity = 5
   }
 
   releaseBike() { 
@@ -11,7 +12,12 @@ class DockingStation {
   };
 
   storeBike(bike) {
-    this.storage.push(bike);
+    if (this.storage.length >= this.capacity) {
+      throw 'Docking station is full'
+    }
+    else {
+      this.storage.push(bike);
+    }
   }
 
 };
