@@ -1,7 +1,11 @@
 class Bike {
 
-  ride() {
-    return "weeee"
+  constructor() {
+    this.working = true
+  }
+
+  isWorking() {
+    return this.working
   }
 }
 
