@@ -1,6 +1,6 @@
 # Rent-Bike-JS 🚲
 
-## User Stories 
+## User Stories
 
 ```
 As a person,
@@ -43,4 +43,3 @@ As a maintainer of the system,
 So that I can manage broken bikes and not disappoint users,
 I'd like docking stations to accept returning bikes (broken or not).
 ```
-
