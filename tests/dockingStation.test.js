@@ -10,6 +10,17 @@ describe("dockingStation", () => {
     expect(dock.workingBikes.length).toBe(1);
   });
 
+  test("working bike will be returned", () => {
+    const bike1 = new Bike();
+    const bike2 = new Bike();
+    const dock = new DockingStation();
+    bike1.reportBroken();
+    dock.storeBike(bike1);
+    dock.storeBike(bike2);
+    console.log(dock.workingBikes);
+    let readybike = dock.releaseBike();
+    expect(readybike.isWorking()).toEqual(true);
+  });
   test("docking station will not allow < 5 bikes to be stored", () => {
     const bike = new Bike();
     const dock = new DockingStation();
