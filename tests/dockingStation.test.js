@@ -32,14 +32,6 @@ describe("dockingStation", () => {
 
   test("docking station custom cap", () => {
     const bike = new Bike();
-    const dock = new DockingStation(2);
-    dock.storeBike(bike);
-    dock.storeBike(bike);
-    expect(() => dock.storeBike(bike)).toThrow("Docking station is full");
-  });
-
-  test("docking station custom cap", () => {
-    const bike = new Bike();
     const dock = new DockingStation(7);
     for (let step = 0; step < 7; step++) {
       dock.storeBike(bike);
