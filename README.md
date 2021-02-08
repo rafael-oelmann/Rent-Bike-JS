@@ -1,5 +1,9 @@
 # Rent-Bike-JS 🚲
 
+## Class Diagram (Docking Station & Bike)
+
+![image of a class diagram.](/images/classDiagram.png "image of a class diagram.")
+
 ## User Stories
 
 ```
