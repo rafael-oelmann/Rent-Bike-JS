@@ -7,6 +7,10 @@ class Bike {
   isWorking() {
     return this.working
   }
+
+  reportBroken() {
+    this.working = false
+  }
 }
 
 module.exports = Bike;

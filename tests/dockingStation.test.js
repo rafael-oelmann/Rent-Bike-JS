@@ -29,4 +29,18 @@ describe('dockingStation', () =>{
     dock.storeBike(bike);
     expect(() => dock.storeBike(bike)).toThrow('Docking station is full');
   });
+
+  test('docking station custom cap', () => {
+    const bike = new Bike();
+    const dock = new DockingStation(7);
+    //refactor this
+    dock.storeBike(bike);
+    dock.storeBike(bike);
+    dock.storeBike(bike);
+    dock.storeBike(bike);
+    dock.storeBike(bike);
+    dock.storeBike(bike);
+    dock.storeBike(bike);
+    expect(() => dock.storeBike(bike)).toThrow('Docking station is full');
+  });
 });
