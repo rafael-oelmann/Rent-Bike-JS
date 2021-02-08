@@ -1,5 +1,11 @@
 # Rent-Bike-JS 🚲
 
+## Intro
+
+A simple node.js app that emulates a rent-bike docking station system, commonly used in cities.
+
+This was written with TDD (Test Driven Development) approach using Jest as my testing framework.
+
 ## Class Diagram (Docking Station & Bike)
 
 ![image of a class diagram.](/images/classDiagram.png "image of a class diagram.")
