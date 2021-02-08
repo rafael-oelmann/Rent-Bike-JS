@@ -2,9 +2,9 @@ const Bike = require("./bike");
 
 class DockingStation {
 
-  constructor() {
+  constructor(capacity = 5) {
     this.storage = []
-    this.capacity = 5
+    this.capacity = capacity
   }
 
   releaseBike() { 
