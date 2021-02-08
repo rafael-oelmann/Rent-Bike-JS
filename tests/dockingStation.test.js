@@ -1,5 +1,6 @@
 const DockingStation = require('../src/dockingStation');
 const Bike = require('../src/bike');
+const { doc } = require('prettier');
 
 describe('dockingStation', () =>{
   test('docking station stores a bike', () => {
@@ -42,5 +43,10 @@ describe('dockingStation', () =>{
     dock.storeBike(bike);
     dock.storeBike(bike);
     expect(() => dock.storeBike(bike)).toThrow('Docking station is full');
+  });
+
+  test('releaseBike error if storage empty', () => {
+    const dock = new DockingStation();
+    expect(() => dock.releaseBike()).toThrow('Docking station is empty');
   });
 });

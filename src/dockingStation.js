@@ -8,7 +8,12 @@ class DockingStation {
   }
 
   releaseBike() { 
-    return new Bike;
+    if (this.storage.length == 0) {
+      throw 'Docking station is empty'
+    }
+    else {
+      return new Bike;
+    }
   };
 
   storeBike(bike) {
