@@ -7,7 +7,7 @@ describe('dockingStation', () =>{
     const bike = new Bike();
     const dock = new DockingStation();
     dock.storeBike(bike);
-    expect(dock.storage.length).toBe(1);
+    expect(dock.workingBikes.length).toBe(1);
   });
 
   test('docking station will not allow < 5 bikes to be stored', () => {
@@ -47,6 +47,14 @@ describe('dockingStation', () =>{
 
   test('releaseBike error if storage empty', () => {
     const dock = new DockingStation();
-    expect(() => dock.releaseBike()).toThrow('Docking station is empty');
+    expect(() => dock.releaseBike()).toThrow('There are no working bikes at this docking station');
+  });
+
+  test('wont return broken bike', () => {
+    const dock = new DockingStation();
+    const bike = new Bike();
+    bike.reportBroken();
+    dock.storeBike(bike);
+    expect(() => dock.releaseBike()).toThrow('There are no working bikes at this docking station')
   });
 });
