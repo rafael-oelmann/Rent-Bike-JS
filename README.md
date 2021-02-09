@@ -10,13 +10,13 @@ This was written with TDD (Test Driven Development) approach using Jest as my te
 
 1. Clone or fork this repo.
 2. If you do not already have [Node](https://nodejs.org/en/ "Nodes's Homepage"), install it from thier homepage.
-3. From the project root directory, run: ~ npm install
-4. From the root directory, you should now be able to run test using Jest with: `~ npm test`
+3. From the project root directory, run: ~ npm install.
+4. From the root directory, you should now be able to run test using Jest with: `~ npm test`.
 
 ## Running the program
 
 In the project root directory run: ~node
-This will start the node REPL where we can begin to input commands
+This will start the node REPL where we can begin to input commands.
 
 start by requiring the classes that we are going to use. In our case we will need DocktionStation and Bike:
 
