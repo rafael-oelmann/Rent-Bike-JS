@@ -9,9 +9,69 @@ This was written with TDD (Test Driven Development) approach using Jest as my te
 ## Installation
 
 1. Clone or fork this repo.
-2. If you do not already have [Node](https://nodejs.org/en/ "Nodes's Homepage") then insall it from thier homepage.
-3. From the project rood directory, run: ~ npm install
-4. Fromt the root directory, you should now be able to run test using Jest with: ~ npm test
+2. If you do not already have [Node](https://nodejs.org/en/ "Nodes's Homepage") intsall it from thier homepage.
+3. From the project root directory, run: ~ npm install
+4. Fromt the root directory, you should now be able to run test using Jest with: `~ npm test`
+
+## Running the programme
+
+In the project rood directory run: ~node
+This will start the node REPL where we can begin to input commands
+
+start by requiring the classes that we are going to use. In our case we will need DocktionStation and Bike:
+
+```
+> const DockingStation = require('./src/dockingStation')
+
+> const Bike = require('./src/bike')
+```
+
+We then instantiate the classes (feel free to choose your own variable names), in this instance we will create 1 DockingStation and 2 Bike’s:
+
+```
+> const dock = new DockingStation()
+
+> const bike1 = new Bike()
+
+> const bike2 = new Bike()
+```
+
+Before docking both bikes, lets report bike1 as broken:
+
+```
+> bike1.reportBroken()
+
+> dock.storeBike(bike1)
+
+> dock.storeBike(bike2)
+```
+
+As you can see now our dock returns the following information:
+
+```
+> dock
+DockingStation {
+  brokenBikes: [ Bike { working: false } ],
+  workingBikes: [ Bike { working: true } ],
+  capacity: 5
+}
+```
+
+Release bike should bring us back the working bike and never the broken bike:
+
+```
+> dock.releaseBike()
+Bike { working: true }
+
+> dock.releaseBike()
+Uncaught 'There are no working bikes at this docking station'
+```
+
+Feel free to experiment. Remember you can create a dock with higher capacity (lets say 10) by instantiating the class like this:
+
+```
+> const dock = new DockingStation(10)
+```
 
 ## Class Diagram (Docking Station & Bike)
 
