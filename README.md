@@ -15,7 +15,7 @@ This was written with TDD (Test Driven Development) approach using Jest as my te
 
 ## Running the program
 
-In the project rood directory run: ~node
+In the project root directory run: ~node
 This will start the node REPL where we can begin to input commands
 
 start by requiring the classes that we are going to use. In our case we will need DocktionStation and Bike:
