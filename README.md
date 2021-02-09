@@ -6,6 +6,13 @@ A simple node.js app that emulates a rent-bike docking station system, commonly 
 
 This was written with TDD (Test Driven Development) approach using Jest as my testing framework.
 
+## Installation
+
+1. Clone or fork this repo.
+2. If you do not already have [Node](https://nodejs.org/en/ "Nodes's Homepage") then insall it from thier homepage.
+3. From the project rood directory, run: ~ npm install
+4. Fromt the root directory, you should now be able to run test using Jest with: ~ npm test
+
 ## Class Diagram (Docking Station & Bike)
 
 ![image of a class diagram.](/images/classDiagram.png "image of a class diagram.")
